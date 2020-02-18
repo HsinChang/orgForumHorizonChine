@@ -29,6 +29,10 @@ app.get('/about.html', (req, res) => {
 app.get('/offers', (req, res) => {
     res.render('offers');
 });
+
+app.get('/new', (req, res) => {
+    res.render('create');
+});
  
 app.listen(4000, () => {
     console.log('App listening on port 4000')
