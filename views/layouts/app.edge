@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Google Fonts -->
+
+
+    <!-- Fab Icon -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/logos/logo.png" />
+    <!-- Fonts Awesome Icons -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="assets/css/vander/bootstrap.min.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="assets/css/vander/animate.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="assets/css/vander/owl.carousel.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/vander/slick.css">
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="assets/css/vander/flaticon.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Forum Horizon Chine</title>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+    <!-- Navbar Section -->
+    <nav class="navbar-section container-fluid d-none d-sm-block">
+        <div class="row">
+            <div class="col-12 nav-container">
+                <!-- Main Nav Start -->
+                <div class="main-nav">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/img/logos/ForumChine.png" class="img-fluid" alt="Nav Logo">
+                        </a>
+
+                        <!-- For Tablet Screen -> Start -->
+                        <div class="menu-toggler d-block d-xl-none">
+                            <div class="hamburger-menu">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav-menu-items">
+                            <ul class="nav-items">
+                                <li><a href="offers">Login/Sign up</a></li>
+                                <li class="menu-item-has-children"><a href="index.html">Home</a>
+                                </li>
+                                <li><a href="about.html">About</a></li>
+                                
+                                <li class="menu-item-has-no-child" class="current-menu-item"><a href="#">Offers</a>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Pages</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="404.html">404</a></li>
+                                        <li><a href="faq.html">FAQs</a></li>
+                                        <li><a href="coming-soon.html">Coming soon</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-no-child"><a href="#contactUs">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- For Tablet Screen -> End -->
+
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <!-- Use "menu-item-has-no-child" class if there is no sub-menu -->
+                                <li class="menu-item-has-no-children">
+                                    <a href="index.html" >Home</a>
+                                </li>
+                                <li class="menu-item-has-no-children">
+                                    <a href="about.html">About</a>
+                                </li>
+                                
+                                <li class="menu-item-has-no-child">
+                                    <a href="#" class="current-menu-item">Offers</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Pages</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="404.html">404</a></li>
+                                        <li><a href="faq.html">FAQ's</a></li>
+                                        <li><a href="coming-soon.html">Coming soon</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-no-children">
+                                    <a href="#contactUs">Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Side Nav Start -->
+                <div class="side-nav d-flex align-items-center">
+                    <a class="auth" href="offers">Sign In</a>
+                    <div class="location">
+                        <div class="dropdown">
+                            <button class="active" type="button" id="dropdownMenu3" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img class="flag" src="assets/img/icons/Flags/united-kingdom.png" alt="cuntry flag" />
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/france.png"
+                                        alt="flag image" class="flag" /></button>
+                                <button class="dropdown-item" type="button"><img
+                                        src="assets/img/icons/Flags/china.png" alt="flag image"
+                                        class="flag" /></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search search-active">
+                        <i class="flaticon-search"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- search start -->
+            <div class="search-content-wrap main-search-active">
+                <div class="search-content">
+                    <form class="search-form" action="#">
+                        <input type="text" placeholder="Type Something To Search">
+                    </form>
+
+                    <a class="search-close d-flex justify-content-center align-items-center">
+                        <i class="fas fa-times icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar for mobile screen -->
+    <div class="navbar-mobile sticky-bar d-block d-sm-none">
+        <div class="container-fluid">
+            <div class="menu-toggler">
+                <div class="hamburger-menu">
+                    <a href="#">
+                        <span>Menu</span>
+                    </a>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="logo">
+                <a href="#"><img src="assets/img/logos/ForumChine.png" alt="logo" class="img-fluid"></a>
+            </div>
+            <div class="divider"></div>
+            <div class="language">
+                <div class="dropdown">
+                    <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <img class="flag" src="assets/img/icons/Flags/united-kingdom.png" alt="cuntry flag" />
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/france.png"
+                                alt="flag image" class="flag" /></button>
+                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/china.png"
+                                alt="flag image" class="flag" /></button>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="search">
+                <i class="flaticon-search"></i>
+            </div>
+        </div>
+
+        <div class="nav-menu-items">
+            <ul class="nav-items">
+                <li><a href="offers">Login/Sign up</a></li>
+                <li class="menu-item-has-no-child"><a href="index.html">Home</a>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="offers.html" class="current-menu-item">Offers</a></li>
+                <li class="menu-item-has-children"><a href="#">Pages</a>
+                    <ul class="sub-menu">
+                        <li><a href="404.html">404</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="coming-soon.html">Coming soon</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-no-child"><a href="#contactUs">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-search-wrapper">
+            <form>
+                <input type="text" placeholder="Type something to start">
+            </form>
+        </div>
+    </div>
+
+    @!section('content')
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container-fluid" id="contactUs">
+            <div class="divider"></div>
+            <div class="row footer-content">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img class="brand-logo" src="assets/img/logos/ForumChine.png" alt="University Logo">
+                    <div class="contact-links">
+                        <div class="link">
+                            <i class="fas fa-envelope"></i>
+                            <p>zhihao.lyu@afcp-paristech.org</p>
+                        </div>
+                        <div class="link">
+                            <i class="fas fa-envelope"></i>
+                            <p>xu.yan@afcp-paristech.org</p>
+                        </div>
+                        <div class="link">
+                            <i class="fas fa-phone"></i>
+                            <p>+33 (0)6 50 85 38 56</p>
+                            
+                        </div>
+                        <div class="link">
+                            <i class="fas fa-phone"></i>
+                            <p>+33 (0)7 60 85 49 65</p>
+                        </div>
+                        
+                        <div class="link">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Paris, France</p>
+                        </div>
+                        <div class="link social-icons">
+                            <a target="_blank" href="https://www.facebook.com/codingeek.net"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a target="_blank" href="https://twitter.com/codingeeknet"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/company/codingeek/about/"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h5>Links</h5>
+                    <ul>
+                        <li><a href="#">Registration</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h5>Information</h5>
+                    <ul>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">My account</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 newsletter">
+                    <h5>Join our newsletter</h5>
+                    <p>A newletter may be a good idea, maybe not, but seems more professional to put it in the website even we don't actually have it.</p>
+                    <form class="d-flex justify-content-between">
+                        <input type="email" placeholder="Enter your email address here">
+                        <button type="submit" class="main-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="copyright">
+            <div class="container-fluid">
+                <p>© Forum Horizon Chine 2019 All rights reserved. </p>
+            </div>
+            <!-- Scroll Top Start -->
+            <a id="scroll-top" class="d-flex justify-content-center align-items-center">
+                <i class="flaticon-up-arrow"></i>
+            </a>
+        </div>
+    </footer>
+
+
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JQuery Link -->
+    <script src="assets/js/vander/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/vander/jquery-migrate-1.4.1.min.js"></script>
+    <script src="assets/js/vander/popper.min.js"></script>
+    <script src="assets/js/vander/bootstrap.min.js"></script>
+    <script src="assets/js/vander/owl.carousel.min.js"></script>
+    <script src="assets/js/vander/slick.min.js"></script>
+    <script src="assets/js/vander/waypoints.min.js"></script>
+    <script src="assets/js/vander/jQuery.rcounter.js"></script>
+
+    <!-- Google maps geolocation -->
+    <script src="http://www.google.cn/maps/api/js?key=AIzaSyBqFuLx8S7A8eianoUhkYMeXpGPvsXp1NM&callback=initMap"
+        async defer></script>
+    <!-- Custom Script -->
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/toggler.js"></script>
+</body>
+
+</html>
