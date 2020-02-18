@@ -1,0 +1,23 @@
+{
+  "name": "org-forum-horizon-chine",
+  "version": "1.0.0",
+  "description": "the official website for Forum Horizon Chine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HsinChang/orgForumHorizonChine.git"
+  },
+  "author": "Xin Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HsinChang/orgForumHorizonChine/issues"
+  },
+  "homepage": "https://github.com/HsinChang/orgForumHorizonChine#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
