@@ -3,6 +3,9 @@ const expressEdge = require('express-edge');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const expressSession = require('express-session');
+const connectMongo = require('connect-mongo');
+const auth = require("./middleware/auth");
 
 // Switch between prod and dev environment
 //const config = require('./config-dev.json');
@@ -21,10 +24,23 @@ const loginUserController = require('./controllers/loginUser');
 
 const app = new express();
 
+app.use(expressSession({
+    secret: 'secret'
+}));
+
 mongoose.connect(config.connectionString, {useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => 'You are now connected to Mongo!')
     .catch(err => console.log('DB Connection Error: ${err.message}'));
 mongoose.set('useCreateIndex', true);
+
+const mongoStore = connectMongo(expressSession);
+ 
+app.use(expressSession({
+    secret: 'secret',
+    store: new mongoStore({
+        mongooseConnection: mongoose.connection
+    })
+}));
 
 app.use('/assets', express.static('assets'));
 app.use(expressEdge.engine);
@@ -42,7 +58,7 @@ app.get('/', homePageController);
 app.get('/index.html', homePageController);
 app.get('/about.html', aboutPageController);
 app.get('/offers', offersPageController);
-app.get('/posts/new', createPostController);
+app.get('/posts/new', auth, createPostController);
 app.post('/posts/store', storePostController);
 //make each post clickable
 app.get('/posts/:id', getPostController);
