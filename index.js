@@ -4,6 +4,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+// Switch between prod and dev environment
+const config = require('config-dev.json');
+// const config = require('config-prod.json'); 
+
 const createPostController = require('./controllers/createPost');
 const offersPageController = require('./controllers/offersPage');
 const storePostController = require('./controllers/storePost');
@@ -13,7 +17,7 @@ const aboutPageController = require('./controllers/aboutPage');
 
 const app = new express();
 
-mongoose.connect('mongodb://localhost:27017/node-blog', { useNewUrlParser: true })
+mongoose.connect(config.connectionString, { useNewUrlParser: true })
     .then(() => 'You are now connected to Mongo!')
     .catch(err => console.error('Something went wrong', err));
 
