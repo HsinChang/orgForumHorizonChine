@@ -3,8 +3,14 @@ const expressEdge = require('express-edge');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const Post = require('./database/models/Post');
- 
+
+const createPostController = require('./controllers/createPost');
+const offersPageController = require('./controllers/offersPage');
+const storePostController = require('./controllers/storePost');
+const getPostController = require('./controllers/getPost');
+const homePageController = require('./controllers/homePage');
+const aboutPageController = require('./controllers/aboutPage');
+
 const app = new express();
 
 mongoose.connect('mongodb://localhost:27017/node-blog', { useNewUrlParser: true })
@@ -18,43 +24,19 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
+//Validation to make sure everything is filled
+const storePost = require('./middleware/storeValidator')
+app.use('/store', storePost)
  
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
-});
-
-app.get('/index.html', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
-});
-
-app.get('/about.html', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'about.html'));
-});
-
-app.get('/offers', async(req, res) => {
-    const posts = await Post.find({})
-    res.render('offers', {
-        posts
-    });
-});
-
-app.get('/new', (req, res) => {
-    res.render('create');
-});
-
-app.post('/store', (req, res) => {
-    Post.create(req.body, (error, post) => {
-        res.redirect('/')
-    })
-});
-
+app.get('/', homePageController);
+app.get('/index.html', homePageController);
+app.get('/about.html', aboutPageController);
+app.get('/offers', offersPageController);
+app.get('/new', createPostController);
+app.post('/store', storePostController);
 //make each post clickable
-app.get('/:id', async (req, res) => {
-    const post = await Post.findById(req.params.id)
-    res.render('post', {
-        post
-    })
-});
+app.get('/:id', getPostController);
  
 app.listen(4000, () => {
     console.log('App listening on port 4000')
