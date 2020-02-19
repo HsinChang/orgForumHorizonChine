@@ -2,8 +2,6 @@
  
 @section('content')
  
-  <div class="masthead">
-    <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
@@ -14,6 +12,29 @@
         </div>
       </div>
     </div>
+
+ <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      @each(post in posts)
+        <div class="post-preview">
+          <a href="post.html">
+            <h3 class="post-title">
+              {{ post.company }}
+            </h3>
+            <p>{{post.job_title}}</p>
+          </a>
+        </div>
+        <hr>
+      @endeach
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="boxed-btn float-right" href="#">Older Posts &rarr;</a>
+      </div>
+    </div>
   </div>
- 
+</div>
+
+<hr>
 @endsection

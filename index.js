@@ -31,8 +31,11 @@ app.get('/about.html', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'about.html'));
 });
 
-app.get('/offers', (req, res) => {
-    res.render('offers');
+app.get('/offers', async(req, res) => {
+    const posts = await Post.find({})
+    res.render('offers', {
+        posts
+    });
 });
 
 app.get('/new', (req, res) => {
