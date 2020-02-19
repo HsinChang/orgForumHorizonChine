@@ -5,8 +5,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 // Switch between prod and dev environment
-// const config = require('config-dev.json');
-const config = require('config-prod.json');
+//const config = require('./config-dev.json');
+const config = require('./config-prod.json');
 
 const createPostController = require('./controllers/createPost');
 const offersPageController = require('./controllers/offersPage');
