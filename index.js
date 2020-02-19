@@ -10,12 +10,15 @@ const storePostController = require('./controllers/storePost');
 const getPostController = require('./controllers/getPost');
 const homePageController = require('./controllers/homePage');
 const aboutPageController = require('./controllers/aboutPage');
+const createUserController = require('./controllers/createUser');
+const storeUserController = require('./controllers/storeUser');
 
 const app = new express();
 
-mongoose.connect('mongodb://localhost:27017/node-blog', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/node-blog', {useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => 'You are now connected to Mongo!')
-    .catch(err => console.error('Something went wrong', err));
+    .catch(err => console.log('DB Connection Error: ${err.message}'));
+mongoose.set('useCreateIndex', true);
 
 app.use('/assets', express.static('assets'));
 app.use(expressEdge.engine);
@@ -26,17 +29,19 @@ app.use(bodyParser.urlencoded({
 }));
 
 //Validation to make sure everything is filled
-const storePost = require('./middleware/storeValidator')
-app.use('/store', storePost)
+const storePost = require('./middleware/storeValidator');
+app.use('/store', storePost);
  
 app.get('/', homePageController);
 app.get('/index.html', homePageController);
 app.get('/about.html', aboutPageController);
 app.get('/offers', offersPageController);
-app.get('/new', createPostController);
-app.post('/store', storePostController);
+app.get('/posts/new', createPostController);
+app.post('/posts/store', storePostController);
 //make each post clickable
-app.get('/:id', getPostController);
+app.get('/posts/:id', getPostController);
+app.get('/auth/register', createUserController);
+app.post('/users/register', storeUserController);
  
 app.listen(4000, () => {
     console.log('App listening on port 4000')
