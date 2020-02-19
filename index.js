@@ -47,6 +47,14 @@ app.post('/store', (req, res) => {
         res.redirect('/')
     })
 });
+
+//make each post clickable
+app.get('/:id', async (req, res) => {
+    const post = await Post.findById(req.params.id)
+    res.render('post', {
+        post
+    })
+});
  
 app.listen(4000, () => {
     console.log('App listening on port 4000')
