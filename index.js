@@ -22,6 +22,9 @@ const storeUserController = require('./controllers/storeUser');
 const loginController = require("./controllers/login");
 const loginUserController = require('./controllers/loginUser');
 
+// Listen to the App Engine-specified port, or 8080 otherwise
+const PORT = process.env.PORT || 8080;
+
 const app = new express();
 
 app.use(expressSession({
@@ -68,6 +71,6 @@ app.get('/auth/login', loginController);
 app.post('/users/login', loginUserController);
 
  
-app.listen(4000, () => {
-    console.log('App listening on port 4000')
+app.listen(PORT, () => {
+    console.log('App listening on port 8080')
 });
