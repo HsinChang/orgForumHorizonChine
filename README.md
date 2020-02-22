@@ -5,3 +5,6 @@ For the general appearence, Twitter Bootstrap is adopted for a responsive design
 
 ## Information
 Abandon Angular for the sake of simplicity... front-end will be only Bootstrap, back-end in development with Express and MongoDB
+
+## send by email:
+https://w3path.com/node-js-send-email-with-attachment/
