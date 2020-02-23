@@ -33,7 +33,7 @@ app.use(expressSession({
 
 mongoose.connect(config.connectionString, {useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => 'You are now connected to Mongo!')
-    .catch(err => console.log('DB Connection Error: ${err.message}'));
+    .catch(err => console.log(`DB Connection Error: ${err.message}`));
 mongoose.set('useCreateIndex', true);
 
 const mongoStore = connectMongo(expressSession);
@@ -62,15 +62,23 @@ app.get('/index.html', homePageController);
 app.get('/about.html', aboutPageController);
 app.get('/offers', offersPageController);
 app.get('/posts/new', auth, createPostController);
-app.post('/posts/store', storePostController);
-//make each post clickable
+app.post('/posts/store', auth, storePostController);
+// make each post clickable
 app.get('/posts/:id', getPostController);
-app.get('/auth/register', createUserController);
+
+// When in real production, we need to add auth here because we don't want everybody to be able to create an user and post 
+// Need to secure the page as well as the api because people can send post request from everywhere (eg. postman)
+// app.get('/auth/register', auth, createUserController);  
+// app.post('/users/register', auth, storeUserController); 
+
+// TODO: find a way to better organize the controllers
+// Now I see there are two types: one that only renders the page; the other that does the actual logic for a resource
+app.get('/auth/register', createUserController);      
 app.post('/users/register', storeUserController);
 app.get('/auth/login', loginController);
 app.post('/users/login', loginUserController);
 
  
 app.listen(PORT, () => {
-    console.log('App listening on port 8080')
+    console.log(`App listening on port ${PORT}`)
 });
