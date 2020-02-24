@@ -1,8 +1,8 @@
 ﻿@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700|Playfair+Display:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Verdana:300,400,500,600,700|Playfair+Display:400,700&display=swap");
 :root {
   --heading-font: "Playfair Display", serif;
-  --main-font: "Comfortaa", cursive;
+  --main-font: "Verdana", cursive;
   --heading-color: rgba(51, 62, 72, 0.9);
   --white: #fff;
   --red: #D80027;
@@ -3581,7 +3581,7 @@ span {
   border: none;
   font-weight: 600;
   font-size: 14px;
-  font-family: "Comfortaa", cursive;
+  font-family: "Verdana", cursive;
   cursor: pointer;
   box-shadow: 0px 6px 20px -8px var(--dark-red-1);
   transition: all 0.4s;
@@ -3596,7 +3596,7 @@ span {
   box-shadow: 0px 10px 20px -8px var(--dark-red-1);
 }
 .header_section .single-header-item .content-area p {
-  font-family: "Comfortaa", cursive;
+  font-family: "Verdana", cursive;
   color: var(--light-grey-2);
   line-height: 1.6;
   padding-right: 50px;
@@ -3890,7 +3890,7 @@ span {
   }
 }
 .testimonial-style-1 .testimonial-description-slider .single-testimonial-item p {
-  font-family: "Comfortaa", cursive;
+  font-family: "Verdana", cursive;
   color: var(--light-grey-2);
   font-size: 13px;
   font-weight: 400;
@@ -4235,7 +4235,7 @@ span {
   padding: 10px 30px;
   cursor: pointer;
   position: relative;
-  font-family: "Comfortaa", cursive;
+  font-family: "Verdana", cursive;
   color: #555;
 }
 .accordion-wrapper .card .card-header a:after {
@@ -4258,7 +4258,7 @@ span {
 .accordion-wrapper .card .card-body {
   background-color: transparent;
   padding: 20px 30px 0px;
-  font-family: "Comfortaa", cursive;
+  font-family: "Verdana", cursive;
   color: var(--light-grey-2);
   font-size: 14px;
   font-weight: 400;
