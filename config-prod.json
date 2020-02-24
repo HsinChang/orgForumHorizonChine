@@ -1,3 +1,3 @@
 {
-    "connectionString": "mongodb://localhost:27017/node-blog"
+    "connectionString": "mongodb+srv://hsinchang:wz8WUyzeuiPJqaIC@cluster0-i2g5o.gcp.mongodb.net/test?authSource=admin&replicaSet=Cluster0-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass%20Community&retryWrites=true&ssl=true"
 }
