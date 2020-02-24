@@ -24,4 +24,5 @@ module.exports = (req, res) => {
             return res.redirect('/auth/login');
         }
     })
+    // TODO: show error on UI
 }
