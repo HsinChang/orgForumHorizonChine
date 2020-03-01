@@ -9850,6 +9850,13 @@ body {
     width: 35%;
   }
 
+  .activities-section {
+    background-color: var(--light-red-2);
+  }
+
+  p {
+    font-size: large;
+  }
 
 }
 
