@@ -1,3 +1,6 @@
+// Can enable debugger when in GCP production deploy
+// require('@google-cloud/debug-agent').start();
+
 const path = require('path');
 const expressEdge = require('express-edge');
 const express = require('express');
