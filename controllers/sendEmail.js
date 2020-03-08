@@ -2,25 +2,25 @@ const nodeMailer = require('nodemailer');
 
 module.exports = (req, res) => {
     let transporter = nodeMailer.createTransport({
-        service: 'gmail',
+        service: 'QQex',
         auth: {
-            user: 'forum.horizon.chine.2017@gmail.com',
-            pass: 'afcp2017'
+            user: 'forum@afcp-paristech.org',
+            pass: 'AFCPzui6'
         }
     });
 
     let mailOptions = {
-        from: 'forum.horizon.chine.2017@gmail.com',
+        from: 'forum@afcp-paristech.org',
         to: 'forum.horizon.chine.2020@gmail.com',
         subject: req.body.name +'_'+req.body.entreprise + '_'+ req.body.job,
         text: '本邮件由地平线官网发送',
         // subject: req.body.subject,
         // body: req.body.message,
-        attachments: [
-            {
-                path: req.body.fileupload
-            }
-        ]
+        // attachments: [
+        //     {
+        //         path: req.body.fileupload
+        //     }
+        // ]
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
