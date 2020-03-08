@@ -24,6 +24,7 @@ const createUserController = require('./controllers/createUser');
 const storeUserController = require('./controllers/storeUser');
 const loginController = require("./controllers/login");
 const loginUserController = require('./controllers/loginUser');
+const emailSenderController = require('./controllers/sendEmail');
 
 // Listen to the App Engine-specified port, or 8080 otherwise
 const PORT = process.env.PORT || 8080;
@@ -81,6 +82,7 @@ app.get('/auth/register', createUserController);
 app.post('/users/register', storeUserController);
 app.get('/auth/login', loginController);
 app.post('/users/login', loginUserController);
+app.post('/email', emailSenderController);
 
  
 app.listen(PORT, () => {
