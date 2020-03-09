@@ -1,4 +1,5 @@
 const nodeMailer = require('nodemailer');
+const fs = require('fs');
 
 module.exports = (req, res) => {
     let transporter = nodeMailer.createTransport({
@@ -9,24 +10,36 @@ module.exports = (req, res) => {
         }
     });
 
+    let file = req.files.fileupload;
+  
+    // Use the mv() method to place the file in upload directory 
+    file.mv('./uploads/' + file.name);
+
     let mailOptions = {
         from: 'forum@afcp-paristech.org',
         to: 'forum.horizon.chine.2020@gmail.com',
         subject: req.body.name +'_'+req.body.entreprise + '_'+ req.body.job,
         text: '本邮件由地平线官网发送',
-        // subject: req.body.subject,
-        // body: req.body.message,
-        // attachments: [
-        //     {
-        //         path: req.body.fileupload
-        //     }
-        // ]
+        subject: req.body.subject,
+        body: req.body.message,
+        attachments: [
+            {
+                filename: file.name,
+                path: './uploads/' + file.name
+            }
+        ]
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             return console.log(error);
+        } else {
+            console.log('Message %s sent: %s', info.messageId, info.response);
+            fs.unlinkSync('./uploads/' + file.name); //remove the file
         }
-        console.log('Message %s sent: %s', info.messageId, info.response);
     });
+
+    // TODO: redirect to a page showing submit successful 
+    // then provide link back to /offers page
+    res.redirect('/offers');
 }

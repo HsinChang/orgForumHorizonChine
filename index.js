@@ -32,6 +32,16 @@ const PORT = process.env.PORT || 8080;
 
 const app = new express();
 
+const fileUpload = require('express-fileupload');
+// enable files upload and make them available
+app.use(fileUpload({
+    createParentPath: true,
+    limits: { 
+      fileSize: 2 * 1024 * 1024 * 1024 //2MB max file(s) size
+    },
+  }));
+app.use('/uploads', express.static('uploads'))
+
 app.use(expressSession({
     secret: 'secret'
 }));

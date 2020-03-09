@@ -23,7 +23,7 @@
             {{ post.content }}
           </div>
         </div>
-          <form id="uploadbanner" method="post" action="/email">
+          <form id="uploadbanner" method="post" enctype="multipart/form-data" action="/email">
             <label for="fname">姓名:</label><br>
             <input type="text" id="name" name="name" value=""><br>
             <label for="lname">投递岗位:</label><br>
