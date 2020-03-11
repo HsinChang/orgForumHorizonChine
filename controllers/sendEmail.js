@@ -13,11 +13,14 @@ module.exports = (req, res) => {
     let file = req.files.fileupload;
   
     // Use the mv() method to place the file in upload directory 
+    if (!fs.existsSync('./uploads')){
+        fs.mkdirSync('./uploads');
+    }
     file.mv('./uploads/' + file.name);
 
     let mailOptions = {
         from: 'forum@afcp-paristech.org',
-        to: 'forum.horizon.chine.2020@gmail.com',
+        to: 'imposiwind@gmail.com',
         subject: req.body.name +'_'+req.body.entreprise + '_'+ req.body.job,
         text: '本邮件由地平线官网发送',
         subject: req.body.subject,
