@@ -20,7 +20,7 @@ module.exports = (req, res) => {
 
     let mailOptions = {
         from: 'forum@afcp-paristech.org',
-        to: 'imposiwind@gmail.com',
+        to: 'forum.horizon.chine.2020@gmail.com',
         subject: req.body.name +'_'+req.body.entreprise + '_'+ req.body.job,
         text: '本邮件由地平线官网发送',
         subject: req.body.subject,

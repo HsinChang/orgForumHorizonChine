@@ -1,20 +1,22 @@
 @layout('layouts.app')
  
 @section('content')
+
+<link rel="stylesheet" type="text/css" href="assets/css/views/offers.css" />
  
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Hi!</h1>
-            <span class="subheading">Edge Layout Example</span>
-          </div>
-        </div>
+<div class="container mt-5 mb-3" >
+  <div class="row">
+    <div class="col-8 mx-auto">
+      <div class="site-heading" style="padding-bottom: 10px; border-bottom: 1px solid var(--dark-red-4);">
+        <h2>招聘信息</h2>
+        <span class="subheading">显示正在招聘的岗位信息。我们会第一时间进行岗位的更新。</span>
       </div>
     </div>
+  </div>
+</div>
 
  <!-- Main Content -->
-<div class="container">
+<div class="container offer-card mt-5 mb-3">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
       @each(post in posts)

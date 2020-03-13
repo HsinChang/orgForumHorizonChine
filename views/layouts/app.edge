@@ -38,7 +38,7 @@
                 <div class="main-nav">
                     <nav class="navbar navbar-expand-lg">
                         <a class="navbar-brand" href="/index.html">
-                            <img src="/assets/img/logos/ForumChine.png" class="img-fluid" alt="Nav Logo">
+                            <img src="/assets/img/logos/ForumChine.png" class="img-fluid" style="max-width: 300px;   object-fit: contain;"  alt="Nav Logo">
                         </a>
 
                         <!-- For Tablet Screen -> Start -->
@@ -51,21 +51,10 @@
                         </div>
                         <div class="nav-menu-items">
                             <ul class="nav-items">
-                                <li><a href="/auth/login">Login/Sign up</a></li>
-                                <li class="menu-item-has-children"><a href="/index.html">Home</a>
-                                </li>
-                                <li><a href="/about.html">About</a></li>
-                                
-                                <li class="menu-item-has-no-child" class="current-menu-item"><a href="#">Offers</a>
-                                </li>
-                                <li class="menu-item-has-children"><a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="404.html">404</a></li>
-                                        <li><a href="faq.html">FAQs</a></li>
-                                        <li><a href="coming-soon.html">Coming soon</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-no-child"><a href="#contactUs">Contact</a></li>
+                                {{--  <li><a href="/auth/login">Login/Sign up</a></li>  --}}
+                                <li class="menu-item-has-children"><a href="/index.html">主页</a></li>
+                                <li class="menu-item-has-no-child" class="current-menu-item"><a href="#">招聘信息</a></li>
+                                <li class="menu-item-has-no-child"><a href="#contactUs">联系我们</a></li>
                             </ul>
                         </div>
                         <!-- For Tablet Screen -> End -->
@@ -74,25 +63,14 @@
                             <ul class="navbar-nav">
                                 <!-- Use "menu-item-has-no-child" class if there is no sub-menu -->
                                 <li class="menu-item-has-no-children">
-                                    <a href="/index.html" >Home</a>
-                                </li>
-                                <li class="menu-item-has-no-children">
-                                    <a href="/about.html">About</a>
+                                    <a href="/index.html" >主页</a>
                                 </li>
                                 
                                 <li class="menu-item-has-no-child">
-                                    <a href="#" class="current-menu-item">Offers</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="404.html">404</a></li>
-                                        <li><a href="faq.html">FAQ's</a></li>
-                                        <li><a href="coming-soon.html">Coming soon</a></li>
-                                    </ul>
+                                    <a href="#" class="current-menu-item">招聘信息</a>
                                 </li>
                                 <li class="menu-item-has-no-children">
-                                    <a href="#contactUs">Contact
+                                    <a href="#contactUs">联系我们
                                     </a>
                                 </li>
                             </ul>
@@ -102,7 +80,7 @@
 
                 <!-- Side Nav Start -->
                 <div class="side-nav d-flex align-items-center">
-                    <a class="auth" href="/auth/login">Sign In</a>
+                    <a class="auth" href="/auth/login">注册</a>
                     <div class="location">
                         <div class="dropdown">
                             <button class="active" type="button" id="dropdownMenu3" data-toggle="dropdown"
@@ -177,19 +155,19 @@
 
         <div class="nav-menu-items">
             <ul class="nav-items">
-                <li><a href="/auth/login">Login/Sign up</a></li>
-                <li class="menu-item-has-no-child"><a href="/index.html">Home</a>
+                {{--  <li><a href="/auth/login">Login/Sign up</a></li>  --}}
+                <li class="menu-item-has-no-child"><a href="/index.html">主页</a>
                 </li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="offers.html" class="current-menu-item">Offers</a></li>
-                <li class="menu-item-has-children"><a href="#">Pages</a>
+                {{--  <li><a href="/关于.html">关于</a></li>  --}}
+                <li><a href="offers.html" class="current-menu-item">招聘信息</a></li>
+                {{--  <li class="menu-item-has-children"><a href="#">Pages</a>
                     <ul class="sub-menu">
                         <li><a href="404.html">404</a></li>
                         <li><a href="faq.html">FAQs</a></li>
                         <li><a href="coming-soon.html">Coming soon</a></li>
                     </ul>
-                </li>
-                <li class="menu-item-has-no-child"><a href="#contactUs">Contact</a></li>
+                </li>  --}}
+                <li class="menu-item-has-no-child"><a href="#contactUs">联系我们</a></li>
             </ul>
         </div>
 
@@ -208,7 +186,7 @@
             <div class="divider"></div>
             <div class="row footer-content">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <img class="brand-logo" src="/assets/img/logos/ForumChine.png" alt="University Logo">
+                    <img class="brand-logo" style="max-width: 220px;   object-fit: contain;" src="/assets/img/logos/ForumChine.png" alt="Forum Logo">
                     <div class="contact-links">
                         <div class="link">
                             <i class="fas fa-envelope"></i>
@@ -239,33 +217,33 @@
                                     class="fab fa-instagram"></i></a>
                             <a target="_blank" href="https://twitter.com/codingeeknet"><i
                                     class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://www.linkedin.com/company/codingeek/about/"><i
+                            <a target="_blank" href="https://www.linkedin.com/company/codingeek/关于/"><i
                                     class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2">
-                    <h5>Links</h5>
+                    <h5>链接</h5>
                     <ul>
-                        <li><a href="#">Registration</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Events</a></li>
+                        <li><a href="#">注册</a></li>
+                        <li><a href="#">博客</a></li>
+                        <li><a href="#">活动</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2">
-                    <h5>Information</h5>
+                    <h5>信息</h5>
                     <ul>
                         <li><a href="#">FAQ's</a></li>
-                        <li><a href="#">My account</a></li>
-                        <li><a href="#">About us</a></li>
+                        {{--  <li><a href="#">My account</a></li>  --}}
+                        <li><a href="#">关于我们</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 newsletter">
-                    <h5>Join our newsletter</h5>
-                    <p>A newletter may be a good idea, maybe not, but seems more professional to put it in the website even we don't actually have it.</p>
+                    <h5>订阅我们</h5>
+                    <p>了解我们的最新动态和组织情况</p>
                     <form class="d-flex justify-content-between">
                         <input type="email" placeholder="Enter your email address here">
-                        <button type="submit" class="main-btn">Subscribe</button>
+                        <button type="submit" class="main-btn">订阅</button>
                     </form>
                 </div>
             </div>
@@ -275,7 +253,7 @@
 
         <div class="copyright">
             <div class="container-fluid">
-                <p>© Forum Horizon Chine 2019 All rights reserved. </p>
+                <p>© Forum Horizon Chine 2019-2020 All rights reserved. </p>
             </div>
             <!-- Scroll Top Start -->
             <a id="scroll-top" class="d-flex justify-content-center align-items-center">
