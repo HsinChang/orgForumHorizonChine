@@ -14,15 +14,24 @@ const auth = require("./middleware/auth");
 //const config = require('./config-dev.json');
 const config = require('./config-prod.json');
 
-const createPostController = require('./controllers/createPost');
-const offersPageController = require('./controllers/offersPage');
+
+// Page render
+const homePageController = require('./controllers/renderPage/homePage');
+
+const aboutPageController = require('./controllers/renderPage/aboutPage');
+
+const createUserController = require('./controllers/renderPage/registerPage');
+const loginController = require("./controllers/renderPage/loginPage");
+
+const offersPageController = require('./controllers/renderPage/offersPage');
+const getPostController = require('./controllers/renderPage/postPage');
+const applySuccessPageController  = require('./controllers/renderPage/applySuccessPage');
+
+const createPostController = require('./controllers/renderPage/createPostPage');
+
+// Logics
 const storePostController = require('./controllers/storePost');
-const getPostController = require('./controllers/getPost');
-const homePageController = require('./controllers/homePage');
-const aboutPageController = require('./controllers/aboutPage');
-const createUserController = require('./controllers/createUser');
 const storeUserController = require('./controllers/storeUser');
-const loginController = require("./controllers/login");
 const loginUserController = require('./controllers/loginUser');
 const emailSenderController = require('./controllers/sendEmail');
 
@@ -76,6 +85,9 @@ app.get('/', homePageController);
 app.get('/index.html', homePageController);
 app.get('/about.html', aboutPageController);
 app.get('/offers', offersPageController);
+app.get('/apply-success', applySuccessPageController);
+
+
 app.get('/posts/new', auth, createPostController);
 app.post('/posts/store', auth, storePostController);
 // make each post clickable
@@ -86,8 +98,6 @@ app.get('/posts/:id', getPostController);
 // app.get('/auth/register', auth, createUserController);  
 // app.post('/users/register', auth, storeUserController); 
 
-// TODO: find a way to better organize the controllers
-// Now I see there are two types: one that only renders the page; the other that does the actual logic for a resource
 app.get('/auth/register', createUserController);      
 app.post('/users/register', storeUserController);
 app.get('/auth/login', loginController);

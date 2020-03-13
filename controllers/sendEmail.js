@@ -42,7 +42,5 @@ module.exports = (req, res) => {
         }
     });
 
-    // TODO: redirect to a page showing submit successful 
-    // then provide link back to /offers page
-    res.redirect('/offers');
+    res.redirect('/apply-success');
 }
