@@ -5,12 +5,10 @@
     <div class="container mt-5 mb-3">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="post-heading">
+            <div class="post-heading mb-3" style="padding-bottom: 10px; border-bottom: 1px solid var(--dark-red-4);">
+              <h4>职位信息</h4>
               <h1>{{ post.company }}</h1>
-              <span class="meta">Posted by
-                <a href="#">{{ post.username }}</a>
-                on {{ post.createdAt.toDateString() }}
-              </span>
+              <h4>{{post.job_title}}</h4>
             </div>
           </div>
         </div>
@@ -22,9 +20,16 @@
           <div class="col-lg-8 col-md-10 mx-auto mb-5">
             {{ post.content }}
           </div>
+          <div class="col-lg-8 col-md-10 mx-auto mb-5">
+            <span class="meta">职位发布于 {{ post.createdAt.toDateString() }} </span>
+          </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
           <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading mb-3" style="padding-bottom: 10px; border-bottom: 1px solid var(--dark-red-4);">
+              <h4>申请职位</h4>
+              <p class="subheading">请填写以下所有项目。</p>
+            </div>
             <form id="uploadbanner" method="post" enctype="multipart/form-data" action="/email">
               <label for="fname">姓名:</label><br>
               <input type="text" id="name" name="name" value=""><br>
@@ -38,7 +43,7 @@
               <label for="fileupload"> CV/简历:</label>
               <input type="file" name="fileupload" value="fileupload" id="fileupload" ><br><br>
 
-              <input type="submit" name="submit" value="提交申请" >
+              <button class="main-btn" style="margin: 2rem 0 !important" type="submit" name="submit" value="提交申请" >提交申请</button>
             </form>          
           </div>
         </div>
