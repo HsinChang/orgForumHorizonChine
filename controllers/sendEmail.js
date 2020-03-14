@@ -24,7 +24,7 @@ module.exports = (req, res) => {
         subject: req.body.name +'_'+req.body.entreprise + '_'+ req.body.job,
         text: '本邮件由地平线官网发送',
         subject: req.body.subject,
-        body: req.body.message,
+        body: `申请人：${req.body.name}； 申请企业：${req.body.entreprise} ；申请岗位：${req.body.job}；简历见附件`,
         attachments: [
             {
                 filename: file.name,

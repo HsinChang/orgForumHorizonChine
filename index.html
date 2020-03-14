@@ -25,6 +25,15 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Forum Horizon Chine</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160638299-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160638299-1');
+    </script>
 </head>
 
 <body>
@@ -51,13 +60,10 @@
                         </div>
                         <div class="nav-menu-items">
                             <ul class="nav-items">
-                                <li><a href="\auth\login">登录</a></li>
-                                <li class="menu-item-has-children"><a href="index.html" class="current-menu-item">主页</a>
-                                </li>
-                                
-                                <li class="menu-item-has-no-child"><a href="offers">招聘信息</a>
-                                </li>
+                                <li class="menu-item-has-children"><a href="/index.html" class="current-menu-item">主页</a></li>
+                                <li class="menu-item-has-no-child"><a href="/offers">招聘信息</a></li>
                                 <li class="menu-item-has-no-child"><a href="#contactUs">联系我们</a></li>
+                                <li><a href="/auth/login">管理员登录</a></li>
                             </ul>
                         </div>
                         <!-- For Tablet Screen -> End -->
@@ -158,11 +164,10 @@
 
         <div class="nav-menu-items">
             <ul class="nav-items">
-                <li><a href="auth\login">登录</a></li>
-                <li class="menu-item-has-no-child"><a href="index.html" class="current-menu-item">主页</a>
-                </li>
-                <li><a href="offers">招聘信息</a></li>
+                <li class="menu-item-has-no-child"><a href="/index.html" class="current-menu-item">主页</a></li>
+                <li><a href="/offers">招聘信息</a></li>
                 <li class="menu-item-has-no-child"><a href="#contactUs">联系我们</a></li>
+                <li><a href="/auth/login">管理员登录</a></li>
             </ul>
         </div>
 
@@ -177,13 +182,10 @@
     <div class="header_section section" style="min-height: 420px;">
         <div class="social-icon">
             <ul>
-                <li><a target="_blank" href="https://www.facebook.com/codingeek.net"><i
-                            class="fab fa-facebook-square"></i></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/codingeeknet/"><i
-                            class="fab fa-instagram"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab fa-instagram"></i></a></li>
                 <li><a target="_blank" href="https://twitter.com/codingeeknet"><i class="fab fa-twitter"></i></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/company/codingeek/about/"><i
-                            class="fab fa-linkedin"></i></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/company/codingeek/about/"><i class="fab fa-linkedin"></i></a></li>
             </ul>
         </div>
         <div class="header-carousel">
@@ -217,7 +219,7 @@
         <div class="container text-center">
             <h2>简介</h2>
             <div>
-            <p style="font-size: large; font-weight: bold;">“中国地平线”论坛，由<a href="http://www.afcp-paristech.org/"><nobr><u style="font-size: large; font-weight: bold;">巴黎高科中法友好协会(AFCP)</u></nobr></a>联合全法中国学者学生联合会创办于2008年，在<a href="https://baike.baidu.com/item/%E5%B7%B4%E9%BB%8E%E9%AB%98%E7%A7%91%E6%8A%80%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%AD%A6%E6%A0%A1%E9%9B%86%E5%9B%A2/5645145?fromtitle=%E5%B7%B4%E9%BB%8E%E9%AB%98%E7%A7%91&fromid=1598895"><nobr><u style="font-size: large; font-weight: bold;">巴黎高科工程师学校集团</u></nobr></a>与中国驻法大使馆支持下,至今已经成功举办12届。通过公司的展台与中国在法留学生面对面交流，收集所有对公司感兴趣的人士的简历，并为公司根据简历进行深入了解讨论、对符合公司职位需求的人才直接进行第一轮面试提供条件；通过主题演讲，展现公司的不同方面的风采，吸引其他合作伙伴；通过圆桌会议，了解公司的业务市场的发展现况和前景，与初创公司交流，获取灵感。
+            <p style="font-size: large;">“中国地平线”论坛，由<a href="http://www.afcp-paristech.org/"><nobr><u style="font-size: large; font-weight: bold;">巴黎高科中法友好协会(AFCP)</u></nobr></a>联合全法中国学者学生联合会创办于2008年，在<a href="https://baike.baidu.com/item/%E5%B7%B4%E9%BB%8E%E9%AB%98%E7%A7%91%E6%8A%80%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%AD%A6%E6%A0%A1%E9%9B%86%E5%9B%A2/5645145?fromtitle=%E5%B7%B4%E9%BB%8E%E9%AB%98%E7%A7%91&fromid=1598895"><nobr><u style="font-size: large; font-weight: bold;">巴黎高科工程师学校集团</u></nobr></a>与中国驻法大使馆支持下,至今已经成功举办12届。通过公司的展台与中国在法留学生面对面交流，收集所有对公司感兴趣的人士的简历，并为公司根据简历进行深入了解讨论、对符合公司职位需求的人才直接进行第一轮面试提供条件；通过主题演讲，展现公司的不同方面的风采，吸引其他合作伙伴；通过圆桌会议，了解公司的业务市场的发展现况和前景，与初创公司交流，获取灵感。
                 同时为中国产业园区、中法两国企业以及留法的优秀人才搭建一个相互交流的平台，促进三方在信息资源与人才资源层面上互通有无。</p>
             </div>
         </div>
@@ -384,13 +386,11 @@
                         <div class="link">
                             <i class="fas fa-phone"></i>
                             <p>+33 (0)6 50 85 38 56</p>
-                            
                         </div>
                         <div class="link">
                             <i class="fas fa-phone"></i>
                             <p>+33 (0)7 60 85 49 65</p>
                         </div>
-                        
                         <div class="link">
                             <i class="fas fa-map-marker-alt"></i>
                             <p>Paris, France</p>
@@ -431,8 +431,6 @@
                     </form>
                 </div>
             </div>
-
-
         </div>
 
         <div class="copyright">
@@ -466,9 +464,9 @@
     <script src="assets/js/vander/waypoints.min.js"></script>
     <script src="assets/js/vander/jQuery.rcounter.js"></script>
 
-    <!-- Google maps geolocation -->
+    <!-- Google maps geolocation Disabled 
     <script src="http://www.google.cn/maps/api/js?key=AIzaSyBqFuLx8S7A8eianoUhkYMeXpGPvsXp1NM&callback=initMap"
-        async defer></script>
+        async defer></script> -->
     <!-- Custom Script -->
     <script src="assets/js/map.js"></script>
     <script src="assets/js/main.js"></script>
