@@ -27,14 +27,14 @@
             </h3>
             <p>{{post.job_title}}</p>
           </a>
-          <p class="post-meta">Posted by
-            <a href="#">{{ post.username }}</a>
-            on {{ post.createdAt.toDateString() }}
+          <p class="post-meta">
+            <!-- Posted by <a href="#">{{ post.username }}</a> -->
+            发布于 {{ post.createdAt.toDateString() }}
           </p>
         </div>
         <hr>
       @endeach
-      <!-- Pager -->
+      <!-- TODO: Pager -->
       <div class="clearfix">
         <a class="boxed-btn float-right" href="#">Older Posts &rarr;</a>
       </div>
