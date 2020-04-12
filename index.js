@@ -17,6 +17,8 @@ const config = require('./config-prod.json');
 
 // Page render
 const homePageController = require('./controllers/renderPage/homePage');
+const frenchPageController = require('./controllers/renderPage/frenchPage');
+const englishPageController = require('./controllers/renderPage/englishPage');
 
 const aboutPageController = require('./controllers/renderPage/aboutPage');
 
@@ -83,6 +85,8 @@ app.use('/store', storePost);
  
 app.get('/', homePageController);
 app.get('/index.html', homePageController);
+app.get('/french.html', frenchPageController);
+app.get('/english.html', englishPageController);
 app.get('/about.html', aboutPageController);
 app.get('/offers', offersPageController);
 app.get('/apply-success', applySuccessPageController);

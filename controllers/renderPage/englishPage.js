@@ -1,5 +1,5 @@
 const path = require('path');
 
 module.exports = (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../../french.html'));
+    res.sendFile(path.resolve(__dirname, '../../english.html'));
 }
